@@ -1,7 +1,7 @@
 // LECTURE: Functions 
 // 1.
 
-// this is a function declaration
+// Function Declaration
 function describeCountry(country, population, capitalCity) {
     return `${country} has ${population} million people and its capital city is ${capitalCity}`;
 }
@@ -22,13 +22,26 @@ console.log(France);
 
 // 2.
 
+// Function Declaration 
 function percentageOfWorld1(population) {
     return (population / 7900) * 100;
 }
 
-const china = percentageOfWorld1(1441);
-console.log(china);
+const chinaPopulation = percentageOfWorld1(1441);
+const francePopulation = percentageOfWorld1(67);
+const portugalPopulation = percentageOfWorld1(10);
+console.log(chinaPopulation, francePopulation, portugalPopulation);
 
+// Function Expression
 const percentageOfWorld2 = function (population) {
-
+    return (population / 7900) * 100;
 }
+percentageOfWorld2(1441);
+console.log(percentageOfWorld2(1441));
+
+// 3. 
+
+//Arrow function
+const percentageOfWorld3 = population => (population / 7900) * 100;
+const chinaPop = percentageOfWorld3(1441);
+console.log(chinaPop);
